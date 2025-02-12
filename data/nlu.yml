@@ -1,0 +1,54 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: get_weather
+  examples: |
+    - What's the weather like in [Glasgow](city) today?
+    - Will it rain in [London](city) tomorrow?
+    - What's the forecast for [Paris](city) on [Friday](date)?
+    - Show me the weather for [New York](city) on [Sunday](date)
+    - Weather in [Berlin](city) on [Tuesday](date)?
+    - Can I get the forecast for [Edinburgh](city) this [weekend](date)?
+    - Is it cold in [Chicago](city) [tonight](date)?
+    - What is the temperature in [Rome](city) on [Wednesday](date)?
+    - Weather conditions in [Manchester](city) on [Monday](date)?
+    - What is the weather like in [Zadar](city)?
+    - How hot is it in [Zadar](city) right now?
+
+- intent: get_details
+  examples: |
+    - What is the [humidity](request) in [Manchester](city)?
+    - Tell me about the [wind](request) conditions in [New York](city)?
+    - How fast is the [wind](request) in [London](city) today?
+    - Can you get me the [humidity](request) for [Berlin](city) on [Friday](date)?
+    - I need details on the [wind](request) in [Los Angeles](city) now.
+

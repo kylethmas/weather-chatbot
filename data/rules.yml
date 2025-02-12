@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+- rule: Activate weather form
+  steps:
+  - intent: get_weather
+  - action: weather_form
+  - active_loop: weather_form
+
+- rule: Submit weather form
+  condition:
+  - active_loop: weather_form
+  steps:
+  - action: weather_form
+  - active_loop: null
+  - action: action_get_weather
+  - action: action_reset_slots
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
